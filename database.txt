@@ -1,0 +1,8 @@
+co jest;Hej, wszystko ok, a co u ciebie?
+co tam;Super, a co u Ciebie?
+spadaj;Dlaczego tak mówisz?
+co powiesz;Nic ciekawego, jestem botem :)
+kochasz mnie;Oczywiœcie - kocham Ciê!
+witam;No czeœæ!
+czesc;No siema!
+kim jestes;Mówi³em, ¿e jestem botem.
