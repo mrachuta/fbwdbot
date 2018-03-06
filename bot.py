@@ -20,7 +20,16 @@ tempPW = getpass.getpass('Podaj hasło do konta %s \n' % tempUL)
 
 time.sleep(3)
 
-tempPID = input('Podaj id partnera do konwersacji \n')
+idsource = 'id.dat'
+
+if os.path.exists(idsource) == True:
+    file = open(idsource, 'r')
+    tempPID = file.readline()
+    print('Znaleziono plik %s, a w nim id partnera do konwersacji: %s' %(idsource, tempPID))
+
+else:
+    print('Nie znaleziono pliku %s, ' % (idsource))
+    tempPID = input('Podaj id partnera do konwersacji ręcznie \n')
 
 print('Rozpoczynam działanie')
 
