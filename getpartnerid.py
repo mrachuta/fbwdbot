@@ -2,6 +2,13 @@
 import requests
 from bs4 import BeautifulSoup as bs4
 
+"""
+Addon to FBWebDriver Bot.
+This tool helps you to get facebook user id in 
+(digit form) - if FB user profile is public available.
+If you want this value can be saved and used every time when you run bot.
+"""
+
 def get_id(url):
 
     myheaders = requests.utils.default_headers()
@@ -15,6 +22,11 @@ def get_id(url):
     r = q.text
 
     soup = bs4(r, 'html.parser')
+
+    # check that user insert valid adress to profile
+
+    assert 'al:android:url' in r, "Brak ID w kodzie strony. Podałeś na pewno poprawny adres do profilu na facebook'u? Być może profil nie jest publicznie dostępny?"
+
     partnerid = soup.find(property = 'al:android:url').get('content')[13:]
     return partnerid
 

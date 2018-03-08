@@ -20,7 +20,9 @@ tempPW = getpass.getpass('Podaj hasło do konta %s \n' % tempUL)
 
 time.sleep(3)
 
-idsource = 'id.dat'
+idsource = 'id.dat' #file with saved conversation's partner id
+
+#function below, check, that file from idsource variable exists or not and do action
 
 if os.path.exists(idsource) == True:
     file = open(idsource, 'r')
