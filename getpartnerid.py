@@ -11,45 +11,45 @@ If you want this value can be saved and used every time when you run bot.
 
 def get_id(url):
 
-    myheaders = requests.utils.default_headers()
-    myheaders.update(
+    my_headers = requests.utils.default_headers()
+    my_headers.update(
         {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0',
         }
     )
 
-    q = requests.get(url, headers = myheaders)
+    q = requests.get(url, headers=my_headers)
     r = q.text
 
     soup = bs4(r, 'html.parser')
 
-    # check that user insert valid adress to profile
+    # Check that user insert valid http adress to profile
 
     assert 'al:android:url' in r, "Brak ID w kodzie strony. Podałeś na pewno poprawny adres do profilu na facebook'u? Być może profil nie jest publicznie dostępny?"
 
-    partnerid = soup.find(property = 'al:android:url').get('content')[13:]
-    return partnerid
+    partner_id = soup.find(property='al:android:url').get('content')[13:]
+    return partner_id
+
 
 print('Za chwilę zostaniesz poproszony o link do profilu osoby z którą chcesz rozmawiać za pośrednictwem bota')
 url = input('-> Podaj link do profilu w formacie http[/s]://facebook.[com/pl]/nazwauzytkownika: \n')
 
-pureid = get_id(url)
-
-idsource = 'id.dat'
+pure_id = get_id(url)
+id_source = 'id.dat'
 
 while True:
 
     choose = input('-> Czy chcesz zapisać te dane? [T]ak/[N]ie/[A]nuluj \n')
 
     if choose == 'T':
-        file = open(idsource, 'w')
-        file.write(pureid)
+        file = open(id_source, 'w')
+        file.write(pure_id)
         file.close()
-        print('Zapisano w pliku %s' %(idsource))
+        print('Zapisano w pliku %s' % id_source)
         break
     elif choose == 'N':
         print('-> OK, nie zapisuje; skopiuj wartość pomiędzy >> << do schowka.')
-        print('>>' + pureid + '<<' )
+        print('>>' + pure_id + '<<' )
         break
     elif choose == 'A':
         print('-> Zamykam')
