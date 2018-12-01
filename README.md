@@ -54,11 +54,10 @@ Nothing (od course if all packages are installed) more is required.
 
 ## Using
 
-1. To get Facebook user id (partner for conversation with bot), run command:
+1. To get Facebook user id (partner for conversation with bot), run command below and follow steps on screen. You will be able to print partner id or save them in configuration file.:
 ```
 python getpartnerid.py 
 ```
-and follow steps on screen. You will be able to print partner id or save them in configuration file.
 2. Run main bot code:
 ```
 python bot.py
