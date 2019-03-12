@@ -50,7 +50,7 @@ how are you?;Thank's I am fine. And you?
 received_pharse should be wrote lowercase letters, see examples inside file.  
 Is recommended to edit file via Notepad++ for example, to keep encoding and newline characters (all next added pair, should be in new line).    
 
-Nothing (od course if all packages are installed) more is required.
+Nothing (of course if all packages are installed) more is required.
 
 ## Using
 
