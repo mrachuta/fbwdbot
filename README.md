@@ -1,16 +1,17 @@
 ## Project name
 FBWDBot - Facebook WebDriver Bot
 Simple bot created only for training, without any special purposes.
+
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Using](#using)
+* [Usage](#usage)
 * [Thanks](#thanks)
 
 ## General info
 Project was started at the beggining of 2018 as author's first steps in Python.
-The main goal was to chceck, how Selenium WebDriver works, and how possibilities has this suite.
+The main goal was to chceck, how Selenium WebDriver works, and how possibilities has this package.
 Primary version was very primitive, the final version is a little bit enhanced.
 
 ## Technologies
@@ -52,17 +53,17 @@ Is recommended to edit file via Notepad++ for example, to keep encoding and newl
 
 Nothing (of course if all packages are installed) more is required.
 
-## Using
+## Usage
 
-1. To get Facebook user id (partner for conversation with bot), run command below and follow steps on screen. You will be able to print partner id or save them in configuration file.:
+1. To get Facebook user id (partner for conversation with bot), run command below and follow steps on screen. You will be able to print partner id or save it in configuration file:
 ```
 python getpartnerid.py 
 ```
-2. Run main bot code:
+2. Run main code:
 ```
 python bot.py
 ```
-3. Insert username and password for bot account (accound must be previously created, manually)
+3. Insert username and password for bot account (accound needs to be created before, manually)
 4. If you chosed to save partner id to file, partner will be automatically selected. Otherwise you must write partner id manually.
 5. Bot has four main functions:
 * weather (use /weather <zip-code>, for example /weather 00-123 for link to site with weather for your localization)
@@ -72,4 +73,4 @@ python bot.py
 
 ## Thanks
 
-I am very thankful for my girlfriend for test with her private account - of course as partner for conversation with bot.
+I am very grateful to my girlfriend for test with her private account (as conversation partner for bot).
